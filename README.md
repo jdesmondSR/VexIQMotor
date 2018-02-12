@@ -1,5 +1,8 @@
 # VexIQMotor
-Vex IQ motor controls for Arduino usage.
+Vex IQ motor controls for Arduino usage.This library had prewriten I2C commands for easy use. If you want to write all the I2C commands on your own you can see my Vex IQ motor Doc here. 
+
+*****DISCLAIMER*****
+This library and the documentation is not official Vex products. There was a lack of official documentation about the Vex motors, so I set out to learn as much as I could on my own. I managed to discover a lot of interesting things along the way and wish to share them with anyone who is interested. This is WITHOUT ANY WARRANTY and NOT BY ANY MEANS AN OFFICIAL DOCUMENT. I simply wish to share what I have learned. 
 
 
 This is a project I did for Storming Robots. In order to learn more about I2C communication and the logic involved, I reverse engineered the Vex IQ motors and used an arduino to replicate them. I used a Saleae Logic Analyzer to see the commands being sent from the Vex IQ to the smart motors. I then used an arduino to replicate the commands and successfully control the vex motors with an arduino.
@@ -12,8 +15,22 @@ This is a project I did for Storming Robots. In order to learn more about I2C co
 5) Include the file into your code and you are ready to go!
 
 # List of functions you can use
+## Startup
 VexMotor() - No args constructor. Declares VexMotor object
 
 int motorSetup(int enablePin, int newAddress) - initializes the VexMotor object
 
-int setMotorSpeed(float spd)
+## Simple Movement
+int setMotorSpeed(float spd) - Move the motor
+
+int coastBrake() - Coast to a stop
+
+int mediumBrake() - Brake and hold possition with medium power
+
+int holdBrake() - Brake and hold the possition
+
+## Encoder Movement
+long checkEncoders() - Returns the current encoder count
+
+int resetEncoders() - Resets the current encoder count
+
