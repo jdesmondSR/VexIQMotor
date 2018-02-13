@@ -14,9 +14,12 @@ This is a project I in order to learn more about I2C communication and the logic
 4) Select the compressed folder with the .c and .h file inside
 5) Include the file into your code and you are ready to go!
 
-API for the following commands: [a relative link](VexIQMotor API.pdf)
 
 # List of functions you can use
+
+## API
+There is an API for download that goes into more detail about the following list of funtions. 
+
 ## Startup
 VexMotor() - No args constructor. Declares VexMotor object
 
